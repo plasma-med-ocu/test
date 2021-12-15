@@ -61,20 +61,20 @@ from scipy import signal
 from matplotlib import pyplot as plt
 
 V=np.loadtxt(
-    fname="C12021-11-25-He-1kV-off-100000.txt",
-    delimiter="\t",
+    fname="C:/python/test/current-voltage-average/30%/C12021-12-15-He-1kV-10kHz-30%-on-100000.txt",
+    delimiter=",",
     dtype="float",
     skiprows=5 )
 
 I=np.loadtxt(
-    fname="C22021-11-25-He-1kV-off-100000.txt",
-    delimiter="\t",
+    fname="C:/python/test/current-voltage-average/30%/C22021-12-15-He-1kV-10kHz-30%-on-100000.txtt",
+    delimiter=",",
     dtype="float",
     skiprows=5)
 
 W=np.array([V[:,0],V[:,1]*I[:,1]]).T
 
-w=1250
+w=12500
 
 maxd=signal.argrelmax(I[:,1],order=w)
 mind=signal.argrelmin(I[:,1],order=w)
