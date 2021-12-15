@@ -8,19 +8,19 @@ Created on Tue Dec 14 15:04:48 2021
 import numpy as np
 
 V1=np.loadtxt(
-    fname="C12021-12-14-He-1kV-10kHz-40%-on-100000.txt",
+    fname="C12021-12-14-He-1kV-10kHz-40-on-100000.txt",
     delimiter=",",
     dtype="float",
     skiprows=5 )
 
 V2=np.loadtxt(
-    fname="C12021-12-14-He-1kV-10kHz-40%-on-200000.txt",
+    fname="C12021-12-14-He-1kV-10kHz-40-on-200000.txt",
     delimiter=",",
     dtype="float",
     skiprows=5 )
 
 V3=np.loadtxt(
-    fname="C12021-12-14-He-1kV-10kHz-40%-on-300000.txt",
+    fname="C12021-12-14-He-1kV-10kHz-40-on-300000.txt",
     delimiter=",",
     dtype="float",
     skiprows=5 )
