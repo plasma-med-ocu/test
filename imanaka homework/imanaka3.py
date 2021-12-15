@@ -50,10 +50,10 @@ for i in range(len(peak)-1):
     
 print(average)
 
-Iseparate=np.split(I,separate)
+Iseparate1=np.split(I,separate)
 
 for i in range(len(peak)):
-    plt.plot(Iseparate[i][:,0],Iseparate[i][:,1])
+    plt.plot(Iseparate1[i][:,0],Iseparate1[i][:,1])
     
     
 import numpy as np
@@ -67,7 +67,7 @@ V=np.loadtxt(
     skiprows=5 )
 
 I=np.loadtxt(
-    fname="C:/python/test/C22021-11-25-He-1kV-off-100000.txt",
+    fname="C22021-11-25-He-1kV-off-100000.txt",
     delimiter="\t",
     dtype="float",
     skiprows=5)
@@ -89,8 +89,8 @@ peak = sorted(peak)
 print(peak)
 
 plt.plot(V[:,0],I[:,1],color="black")
-plt.scatter(V[:,0][maxd],I[:,1][maxd],color="red")
-plt.scatter(V[:,0][mind],I[:,1][mind],color="red")
+plt.scatter(V[:,0][maxd],I[:,1][maxd],color="blue")
+plt.scatter(V[:,0][mind],I[:,1][mind],color="blue")
 plt.xlabel("time[s]")
 plt.ylabel("current[A]")
 
@@ -101,12 +101,9 @@ for i in range(len(peak)-1):
     
 print(average)
 
-Iseparate=np.split(I,separate)
+Iseparate2=np.split(I,separate)
 
 for i in range(len(peak)):
-    plt.plot(Iseparate[i][:,0],Iseparate[i][:,1])
+    plt.plot(Iseparate2[i][:,0],Iseparate2[i][:,1])
 
-    
-    
-    
 
