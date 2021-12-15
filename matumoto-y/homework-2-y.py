@@ -47,13 +47,9 @@ plt.scatter(I[:,0][peaks2], I[:,1][peaks2],c = 'b')
 plt.xlabel("Time(s)")
 plt.ylabel("Current(A)")
 
-peakpeak = []
-
-for i in range(len(peak)-1):
-    aveave = (peak[i]+peak[i+1])//2
-    peakpeak.append(aveave)
+peakpeak = [(peak[i]+peak[i+1])//2 for i in range(len(peak)-1)]
     
-print(aveave)
+print(peakpeak)
 
 Is = np.split(I, peakpeak)
 
