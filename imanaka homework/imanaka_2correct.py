@@ -67,7 +67,7 @@ V=np.loadtxt(
     skiprows=5 )
 
 I=np.loadtxt(
-    fname="C:/python/test/current-voltage-average/30%/C22021-12-15-He-1kV-10kHz-30%-on-100000.txtt",
+    fname="C:/python/test/current-voltage-average/30%/C22021-12-15-He-1kV-10kHz-30%-on-100000.txt",
     delimiter=",",
     dtype="float",
     skiprows=5)
