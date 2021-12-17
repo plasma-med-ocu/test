@@ -76,13 +76,13 @@ Ipla = []
 for i in range(len(peaks)):
     if peak[i] == peaks[i]:
        if len(Is[i]) > len(Iss[i]):
-         Ipla.append(Is[i][0:-1,1] - Iss[i][:,1])#
+         Ipla.append(Is[i][0:-1,1] - Iss[i][:,1])
          plt.plot(Is[i][0:-1,0],Ipla[i])
        elif len(Is[i]) <= len(Iss[i]):
          Ipla.append(Is[i][:,1] - Iss[i][0:-1,1])
          plt.plot(Is[i][:,0],Ipla[i])
     elif len(Is[i]) == len(Iss[i]):
-        np.roll(Iss,1)#
+        np.roll(Iss,1)
         Ipla.append(Is[i][:,1] - Iss[i][:,1])
         plt.plot(Is[i][:,0],Ipla[i])
     elif len(Is[i]) < len(Iss[i]):
