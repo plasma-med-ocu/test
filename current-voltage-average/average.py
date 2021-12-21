@@ -6,33 +6,37 @@ Created on Tue Dec 14 15:04:48 2021
 """
 
 import numpy as np
+from matplotlib import pyplot as plt
 
-V1=np.loadtxt(
-    fname="C:/python/test/current-voltage-average/40%/C12021-12-14-He-1kV-10kHz-40%-on-100000.txt",
+sample1=np.loadtxt(
+    fname="C:/python/test/current-voltage-average/30%/C22021-12-15-He-1kV-10kHz-30%-on-100000.txt",
     delimiter=",",
     dtype="float",
     skiprows=5 )
 
-V2=np.loadtxt(
-    fname="C:/python/test/current-voltage-average/40%/C12021-12-14-He-1kV-10kHz-40%-on-200000.txt",
+sample2=np.loadtxt(
+    fname="C:/python/test/current-voltage-average/30%/C22021-12-15-He-1kV-10kHz-30%-on-200000.txt",
     delimiter=",",
     dtype="float",
     skiprows=5 )
 
-V3=np.loadtxt(
-    fname="C:/python/test/current-voltage-average/40%/C12021-12-14-He-1kV-10kHz-40%-on-300000.txt",
+sample3=np.loadtxt(
+    fname="C:/python/test/current-voltage-average/30%/C22021-12-15-He-1kV-10kHz-30%-on-300000.txt",
     delimiter=",",
     dtype="float",
     skiprows=5 )
 
-V12=np.array((V1[:,0]+V2[:,0],V1[:,1]+V2[:,1])).T
+sample12=np.array((sample1[:,0]+sample2[:,0],sample1[:,1]+sample2[:,1])).T
 
-V123=np.array((V12[:,0]+V3[:,0],V12[:,1]+V3[:,1])).T
+sample123=np.array((sample12[:,0]+sample3[:,0],sample12[:,1]+sample3[:,1])).T
 
-Vaverage=np.array((V123[:,0]/3,V123[:,1]/3)).T
+sample_average=np.array((sample123[:,0]/3,sample123[:,1]/3)).T
 
 np.savetxt(
-    "C:/python/test/current-voltage-average/dutyratio40%/C12021-He-1kV-10kHz-40%-average.txt",
-    Vaverage,
+    "C:/python/test/current-voltage-average/30%/C22021-He-1kV-10kHz-30%-average.txt",
+    sample_average,
     delimiter=",",
     )
+
+plt.plot(sample_average[:,0],sample_average[:,1])
+
